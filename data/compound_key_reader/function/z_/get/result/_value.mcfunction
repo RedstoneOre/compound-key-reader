@@ -1,0 +1,1 @@
+$data modify storage compound_key_reader:temp get_result.v.value set from storage compound_key_reader:temp get_convert.compound.$(k)

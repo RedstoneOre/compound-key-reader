@@ -1,0 +1,12 @@
+Result Function
+  * xx means `storage compound_key_reader:result keys[<count>]`
+  Arguments:
+    c: count
+    l,r: substr cur
+  Result:
+    0: Nothing
+    +1: Save substr cur((l,r]) in xx.cur
+    +2: Save key name in xx.key
+    +4: Save key value in xx.value
+    +8: Save the sequence in the keys in xx.seq
+    VOID: same as 10
