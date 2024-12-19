@@ -9,10 +9,15 @@ function compound_key_reader:get {data:{from/value:...},result:'<ResultFunction>
 ```json
 [ { "value": "(value)", "key": "(key)", "seq": "(seq)" }, ... ]
 ```
+
+## UPGRADING
++ If you want to update from `<=Beta2.0` to `>=Beta2.1`,follow the `UPGRADE.1.md`
+
 ## Result Functions
 + **The functions will beed called by the reader function to get the format of the result.**
++ **You can use it just like `foreach(<ResultFunction>)` in the following format**
 
-|Category   |Value      |Description                                    |
+|Type       |Value      |Description                                    |
 |----------:|:----------|:----------------------------------------------|
 |Arguments  |`c`        |Count                                          |
 |Arguments  |`l`,`r`    |Substr cur                                     |
@@ -23,4 +28,5 @@ function compound_key_reader:get {data:{from/value:...},result:'<ResultFunction>
 |ReturnValue|+`8`       |Save the sequence in the keys in xx.seq        |
 |**Presets**|`compound_key_reader:result_preset/key`      |key+seq      |
 |**Presets**|`compound_key_reader:result_preset/key-value`|key+value+seq|
+|**Presets**|`compound_key_reader:result_preset/all`      |(all)        |
 + **Substr curs**:Use `string storage compound_key_reader:result str $(l) $(r)` to get the cur

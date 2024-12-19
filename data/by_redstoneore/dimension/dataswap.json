@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:overworld",
+  "type": "by_redstoneore:dataswap",
   "generator": {
       "type": "flat",
       "settings": {
